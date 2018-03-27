@@ -25,3 +25,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Specs
+* Program should be able to list recipes
+  * Input: land on initial page
+  * Output: a list of recipes
+
+* Program should allow user to add a new recipe
+  * Input: recipe form
+  * Output: a new recipe added to the list
+
+* Program should allow user to edit recipes
+  * Input: new form with edit capabilities
+  * Output: updated recipe
+
+* Program should allow user to delete recipes
+  * Input: delete command
+  * Output: new list of recipes without the deleted recipes
+
+* Program should allow user to search for recipes
+  * Input: search term
+  * Output: recipes that match search term.d ..
