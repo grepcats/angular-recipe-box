@@ -9,7 +9,7 @@ import { Recipe } from '../models/recipe.model'
 export class EditRecipeComponent {
 
   constructor() { }
-  @Input() childSelectedRecipe: Recipe;
+  @Input() childSelectedRecipe2: Recipe;
   @Output() clickedDone = new EventEmitter;
   @Output() clickedDelete = new EventEmitter;
 

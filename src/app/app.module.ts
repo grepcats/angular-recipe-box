@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { EditRecipeComponent } from './edit-recipe/edit-recipe.component';
 import { NewRecipeComponent } from './new-recipe/new-recipe.component';
+import { ViewRecipeComponent } from './view-recipe/view-recipe.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { NewRecipeComponent } from './new-recipe/new-recipe.component';
     AppComponent,
     RecipeListComponent,
     EditRecipeComponent,
-    NewRecipeComponent
+    NewRecipeComponent,
+    ViewRecipeComponent
   ],
   imports: [
     BrowserModule,

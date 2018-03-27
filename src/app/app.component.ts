@@ -13,6 +13,7 @@ export class AppComponent {
   new Recipe('Kale Chips', 'some boring food that liberals eat', 'kale, salt, olive oil, pepper', 'Set oven to 400 degrees. Tear kale into pieces. Drizzle with olive oil and add seasonings. Bake for 10-12 minutes'),
   new Recipe('Coffee', 'bean water', 'coffee beans, water, whipping cream', 'Grind coffee beans to desired consistency. Put grounds in French Press and pour water over them. Figure out the rest')];
   selectedRecipe: Recipe = null;
+  selectedRecipe2: Recipe = null;
 
 
   addRecipe(newRecipe: Recipe) {
@@ -20,17 +21,24 @@ export class AppComponent {
   }
 
   editRecipe(clickedRecipe) {
-    this.selectedRecipe = clickedRecipe;
+    this.selectedRecipe2 = clickedRecipe;
+    this.selectedRecipe = null;
     //console.log("this is the clicked recipe: " + this.selectedRecipe.description);
   }
 
+  viewRecipe(clickedRecipe) {
+    this.selectedRecipe = clickedRecipe;
+    this.selectedRecipe2 = null;
+    console.log("this is the clicked recipe: " + this.selectedRecipe.title);
+  }
+
   finishedEditing() {
-    this.selectedRecipe = null;
+    this.selectedRecipe2 = null;
   }
 
   deleteRecipe() {
-    let index = this.masterRecipeList.indexOf(this.selectedRecipe)
+    let index = this.masterRecipeList.indexOf(this.selectedRecipe2)
     this.masterRecipeList.splice(index, 1);
-    this.selectedRecipe = null;
+    this.selectedRecipe2 = null;
   }
 }

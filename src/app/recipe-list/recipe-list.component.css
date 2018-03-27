@@ -8,9 +8,8 @@ li {
   cursor: pointer;
 }
 
-
-
 #sidebar {
+  border-radius: 5px 5px 0 0;
   min-width: 250px;
   max-width: 250px;
   min-height: 100vh;
@@ -22,4 +21,5 @@ li {
     padding: 20px;
     background: #00B2CA;
     color: #1D4E89;
+    border-radius: 5px 5px 0 0;
 }

@@ -15,9 +15,9 @@ export class RecipeListComponent implements OnInit {
   ngOnInit() {
   }
 
-  @Output() clickSender = new EventEmitter();
-  editButtonClicked(recipeToEdit: Recipe) {
-    this.clickSender.emit(recipeToEdit);
+  @Output() viewSender = new EventEmitter();
+  recipeClicked(recipeToView: Recipe) {
+    this.viewSender.emit(recipeToView);
   }
 
 }

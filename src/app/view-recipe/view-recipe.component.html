@@ -1,0 +1,7 @@
+<div *ngIf="childSelectedRecipe">
+  <h3>{{childSelectedRecipe.title}}</h3>
+  <h4>{{childSelectedRecipe.description}}</h4>
+  <p>{{childSelectedRecipe.ingredients}}</p>
+  <p>{{childSelectedRecipe.instructions}}</p>
+  <button (click)="editButtonClicked(childSelectedRecipe)" class="btn btn-info">Edit</button>
+</div>

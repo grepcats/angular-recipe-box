@@ -7,11 +7,11 @@
   </div>
 
   <div class="wrapper">
-    <app-recipe-list [childRecipeList] = 'masterRecipeList' (clickSender)="editRecipe($event)"></app-recipe-list>
+    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)"></app-recipe-list>
     <div class="content-col">
       <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
-
-      <app-edit-recipe [childSelectedRecipe] = 'selectedRecipe' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
+      <app-view-recipe [childSelectedRecipe] = 'selectedRecipe'  (clickSender)="editRecipe($event)"></app-view-recipe>
+      <app-edit-recipe [childSelectedRecipe2] = 'selectedRecipe2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
     </div>
   </div>
 
