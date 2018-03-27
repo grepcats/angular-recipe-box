@@ -6,9 +6,16 @@
     </h1>
   </div>
 
-  <app-recipe-list [childRecipeList] = 'masterRecipeList' (clickSender)="editRecipe($event)"></app-recipe-list>
-  <app-edit-recipe [childSelectedRecipe] = 'selectedRecipe' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
-  <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+  <div class="wrapper">
+    <app-recipe-list [childRecipeList] = 'masterRecipeList' (clickSender)="editRecipe($event)"></app-recipe-list>
+    <div class="content-col">
+      <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+
+      <app-edit-recipe [childSelectedRecipe] = 'selectedRecipe' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
+    </div>
+  </div>
+
+
 
 
 </div>

@@ -1,4 +1,4 @@
-<div *ngIf="childSelectedRecipe">
+<div id="edit-recipe-div" *ngIf="childSelectedRecipe">
   <h3 class="recipe-title">{{childSelectedRecipe.description}}</h3>
   <h3>Edit recipe</h3>
   <div class="form-group">
@@ -13,8 +13,8 @@
     <label>Enter Recipe Instructions:</label>
     <input [(ngModel)]="childSelectedRecipe.instructions" class="form-control">
   </div>
-  <button (click)="finishedEditing()" class="btn btn-primary btn-sm">Done</button>
-  <button (click)="deleteRecipe()" class="btn btn-danger btn-sm">Delete</button>
+  <button (click)="finishedEditing()" class="btn btn-primary btn-lg">Done</button>
+  <button (click)="deleteRecipe()" class="btn btn-danger btn-lg">Delete</button>
 
 
 </div>

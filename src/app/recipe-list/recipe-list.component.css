@@ -5,12 +5,10 @@ ul {
 li {
   margin-top: 10px;
   font-size: 1.50em;
+  cursor: pointer;
 }
 
-/*.wrapper {
-  display: flex;
-  align-items: stretch;
-}*/
+
 
 #sidebar {
   min-width: 250px;
