@@ -2,5 +2,14 @@
 @import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
 
 body {
-  background-color: salmon;
+  background-color: #FCDDBB;
+  color: #F79256;
+}
+
+#main-head {
+
+}
+
+.jumbotron {
+  background-color: #7DCFB6
 }

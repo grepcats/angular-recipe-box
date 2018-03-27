@@ -1,8 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <h1 style="text-align:center">
-    Welcome to Masen & Kayla's {{ title }}!
-  </h1>
+  <div class="jumbotron">
+    <h1 style="text-align:center" id="main-head">
+      Masen & Kayla's Amazing {{ title }}!!!
+    </h1>
+  </div>
 
   <app-recipe-list [childRecipeList] = 'masterRecipeList' (clickSender)="editRecipe($event)"></app-recipe-list>
   <app-edit-recipe [childSelectedRecipe] = 'selectedRecipe' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
