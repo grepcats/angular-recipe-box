@@ -7,7 +7,7 @@
   </div>
 
   <div class="wrapper">
-    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)"></app-recipe-list>
+    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)" (newRecipe)="loadRecipeForm()"></app-recipe-list>
     <div class="content-col">
       <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
       <app-view-recipe [childSelectedRecipe] = 'selectedRecipe'  (clickSender)="editRecipe($event)"></app-view-recipe>

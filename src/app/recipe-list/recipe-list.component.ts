@@ -20,4 +20,9 @@ export class RecipeListComponent implements OnInit {
     this.viewSender.emit(recipeToView);
   }
 
+  @Output() newRecipe = new EventEmitter();
+  newRecipeClicked() {
+    this.newRecipe.emit();
+  }
+
 }

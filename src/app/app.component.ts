@@ -26,6 +26,7 @@ export class AppComponent {
     //console.log("this is the clicked recipe: " + this.selectedRecipe.description);
   }
 
+
   viewRecipe(clickedRecipe) {
     this.selectedRecipe = clickedRecipe;
     this.selectedRecipe2 = null;
