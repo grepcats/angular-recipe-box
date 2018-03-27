@@ -4,7 +4,7 @@
     Welcome to Masen & Kayla's {{ title }}!
   </h1>
 
-  <app-recipe-list [childRecipeList] = 'masterRecipeList'></app-recipe-list>
-  <app-edit-recipe></app-edit-recipe>
+  <app-recipe-list [childRecipeList] = 'masterRecipeList' (clickSender)="editRecipe($event)"></app-recipe-list>
+  <app-edit-recipe [childSelectedRecipe] = 'selectedRecipe' (clickedDone)="finishedEditing()"></app-edit-recipe>
 
 </div>

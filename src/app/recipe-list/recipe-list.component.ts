@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Recipe } from '../models/recipe.model';
 
 @Component({
@@ -13,6 +13,11 @@ export class RecipeListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  @Output() clickSender = new EventEmitter();
+  editButtonClicked(recipeToEdit: Recipe) {
+    this.clickSender.emit(recipeToEdit);
   }
 
 }

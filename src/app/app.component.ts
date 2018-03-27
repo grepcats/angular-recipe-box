@@ -10,15 +10,17 @@ export class AppComponent {
   title = 'Recipe Box';
 
   masterRecipeList: Recipe[] = Recipe.allRecipes;
-  selectedRecipe: Recipe = this.masterRecipeList[0];
+  selectedRecipe: Recipe = null;
+
   editRecipe(clickedRecipe) {
-  this.selectedRecipe = clickedRecipe;
+    this.selectedRecipe = clickedRecipe;
+    //console.log("this is the clicked recipe: " + this.selectedRecipe.description);
   }
 
-//   editTask() {
-//     alert("You just requested to edit a Task!");
-//
-// }
+  finishedEditing() {
+    this.selectedRecipe = null;
+  }
+
 }
 
 
