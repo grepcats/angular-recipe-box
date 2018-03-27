@@ -27,3 +27,7 @@ h3 {
   flex-direction: column;
   margin-left: 15px;
 }
+
+.well {
+  background-color: #FCD1A4;
+}

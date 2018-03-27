@@ -1,20 +1,22 @@
-<h3 id="new-recipe-title">New Recipe</h3>
-<div class="form-group">
- <label>Enter Recipe Title:</label>
- <input #newTitle class="form-control">
-</div>
-<div class="form-group">
- <label>Enter Recipe Description:</label>
- <input #newDescription class="form-control">
-</div>
-<div class="form-group">
-  <label>Enter Recipe Ingredients:</label>
-  <input #newIngredients class="form-control">
-</div>
-<div class="form-group">
- <label>Enter Recipe Instructions:</label>
- <input #newInstructions class="form-control">
-</div>
-<div>
-  <button (click)="submitForm(newTitle.value, newDescription.value, newIngredients.value, newInstructions.value); newTitle.value=''; newDescription.value='';newIngredients.value=''; newInstructions.value='';" class="btn btn-primary btn-lg">Add recipe</button>
+<div class="well">
+  <h3 id="new-recipe-title">New Recipe</h3>
+  <div class="form-group">
+   <label>Enter Recipe Title:</label>
+   <input #newTitle class="form-control">
+  </div>
+  <div class="form-group">
+   <label>Enter Recipe Description:</label>
+   <input #newDescription class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Enter Recipe Ingredients:</label>
+    <input #newIngredients class="form-control">
+  </div>
+  <div class="form-group">
+   <label>Enter Recipe Instructions:</label>
+   <input #newInstructions class="form-control">
+  </div>
+  <div>
+    <button (click)="submitForm(newTitle.value, newDescription.value, newIngredients.value, newInstructions.value); newTitle.value=''; newDescription.value='';newIngredients.value=''; newInstructions.value='';" class="btn btn-primary btn-lg">Add recipe</button>
+  </div>
 </div>

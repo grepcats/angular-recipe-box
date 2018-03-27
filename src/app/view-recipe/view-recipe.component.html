@@ -1,7 +1,9 @@
-<div *ngIf="childSelectedRecipe">
+<div *ngIf="childSelectedRecipe" class="well">
   <h3>{{childSelectedRecipe.title}}</h3>
   <h4>{{childSelectedRecipe.description}}</h4>
-  <p>{{childSelectedRecipe.ingredients}}</p>
-  <p>{{childSelectedRecipe.instructions}}</p>
+  <p><span class="bold">Ingredients:</span></p>
+  <ul *ngFor='let ingredient of childSelectedRecipe.ingredients.split(", ")'>
+  <li>{{ingredient}}</li></ul>
+  <p><span class="bold">Directions:</span> {{childSelectedRecipe.instructions}}</p>
   <button (click)="editButtonClicked(childSelectedRecipe)" class="btn btn-info">Edit</button>
 </div>
