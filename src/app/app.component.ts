@@ -24,6 +24,7 @@ export class AppComponent {
   deleteRecipe() {
   let index = this.masterRecipeList.indexOf(this.selectedRecipe)
   this.masterRecipeList.splice(index, 1);
+  this.selectedRecipe = null;
   }
 }
 
