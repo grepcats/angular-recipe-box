@@ -5,6 +5,7 @@
       <h3>Recipes</h3>
   </div>
   <ul>
+    <li id="show-form" (click)="displayForm()">Add New Recipe</li>
     <li *ngFor="let currentRecipe of childRecipeList" (click)="recipeClicked(currentRecipe)">{{currentRecipe.title}}
     </li>
   </ul>

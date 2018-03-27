@@ -6,12 +6,9 @@ body {
   color: #F79256;
 }
 
-#main-head {
-
-}
-
 .jumbotron {
-  background-color: #7DCFB6
+  background-color: #7DCFB6;
+  color: #1D4E89;
 }
 
 .wrapper {

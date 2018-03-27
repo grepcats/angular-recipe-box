@@ -7,9 +7,11 @@
   </div>
 
   <div class="wrapper">
-    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)" (newRecipe)="loadRecipeForm()"></app-recipe-list>
+    <app-recipe-list [childRecipeList] = 'masterRecipeList' (viewSender)="viewRecipe($event)" [showFormBool] = 'showForm' (clickedBool) = "updateShowForm($event)"></app-recipe-list>
     <div class="content-col">
-      <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+      <div *ngIf="showForm">
+        <app-new-recipe (sendRecipe)="addRecipe($event)"></app-new-recipe>
+      </div>
       <app-view-recipe [childSelectedRecipe] = 'selectedRecipe'  (clickSender)="editRecipe($event)"></app-view-recipe>
       <app-edit-recipe [childSelectedRecipe2] = 'selectedRecipe2' (clickedDone)="finishedEditing()" (clickedDelete)="deleteRecipe()"></app-edit-recipe>
     </div>

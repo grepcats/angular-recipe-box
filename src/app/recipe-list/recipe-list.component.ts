@@ -9,6 +9,14 @@ import { Recipe } from '../models/recipe.model';
 export class RecipeListComponent implements OnInit {
 
   @Input() childRecipeList: Recipe[];
+  @Input() showFormBool: boolean;
+
+  @Output() clickedBool = new EventEmitter;
+
+  displayForm() {
+    this.showFormBool = !this.showFormBool;
+    this.clickedBool.emit(this.showFormBool);
+  }
 
   constructor() { }
 

@@ -14,10 +14,17 @@ export class AppComponent {
   new Recipe('Coffee', 'bean water', 'coffee beans, water, whipping cream', 'Grind coffee beans to desired consistency. Put grounds in French Press and pour water over them. Figure out the rest')];
   selectedRecipe: Recipe = null;
   selectedRecipe2: Recipe = null;
+  showForm: boolean = false;
 
+  updateShowForm(formState) {
+    this.showForm = formState;
+    this.selectedRecipe = null;
+    this.selectedRecipe2 = null;
+  }
 
   addRecipe(newRecipe: Recipe) {
     this.masterRecipeList.push(newRecipe);
+    this.showForm = false;
   }
 
   editRecipe(clickedRecipe) {
@@ -26,11 +33,10 @@ export class AppComponent {
     //console.log("this is the clicked recipe: " + this.selectedRecipe.description);
   }
 
-
   viewRecipe(clickedRecipe) {
     this.selectedRecipe = clickedRecipe;
     this.selectedRecipe2 = null;
-    console.log("this is the clicked recipe: " + this.selectedRecipe.title);
+    this.showForm = false;
   }
 
   finishedEditing() {

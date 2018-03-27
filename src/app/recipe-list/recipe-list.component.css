@@ -18,8 +18,14 @@ li {
 }
 
 #sidebar .sidebar-header {
-    padding: 20px;
-    background: #00B2CA;
-    color: #1D4E89;
-    border-radius: 5px 5px 0 0;
+  padding: 20px;
+  background: #00B2CA;
+  color: #1D4E89;
+  border-radius: 5px 5px 0 0;
+}
+
+#show-form {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-decoration: underline;
 }
