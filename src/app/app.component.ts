@@ -9,8 +9,16 @@ import { Recipe } from './models/recipe.model';
 export class AppComponent {
   title = 'Recipe Box';
 
-  masterRecipeList: Recipe[] = Recipe.allRecipes;
+  masterRecipeList: Recipe[] = [new Recipe('Oatmeal', 'oats, water, salt', 'Boil the oats in water and salt'),
+  new Recipe('Kale Chips', 'kale, salt, olive oil, pepper', 'Set oven to 400 degrees. Tear kale into pieces. Drizzle with olive oil and add seasonings. Bake for 10-12 minutes'),
+  new Recipe('Coffee', 'coffee beans, water, whipping cream', 'Grind coffee beans to desired consistency. Put grounds in French Press and pour water over them. Figure out the rest')];
   selectedRecipe: Recipe = null;
+
+
+  addRecipe(newRecipe: Recipe) {
+    this.masterRecipeList.push(newRecipe);
+    console.log(this.masterRecipeList);
+  }
 
   editRecipe(clickedRecipe) {
     this.selectedRecipe = clickedRecipe;
@@ -27,8 +35,3 @@ export class AppComponent {
   this.selectedRecipe = null;
   }
 }
-
-
-new Recipe('Oatmeal', ['oats', 'water', 'salt'], 'Boil the oats in water and salt');
-new Recipe('Kale Chips', ['kale', 'salt', 'olive oil', 'pepper'], 'Set oven to 400 degrees. Tear kale into pieces. Drizzle with olive oil and add seasonings. Bake for 10-12 minutes');
-new Recipe('Coffee', ['coffee beans', 'water', 'whipping cream'], 'Grind coffee beans to desired consistency. Put grounds in French Press and pour water over them. Figure out the rest');

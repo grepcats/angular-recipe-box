@@ -3,6 +3,8 @@
   <h3>Edit recipe</h3>
   <label>Enter Recipe Description:</label>
   <input [(ngModel)]="childSelectedRecipe.description">
+  <label>Enter Recipe Ingredients:</label>
+  <input [(ngModel)]="childSelectedRecipe.ingredients">
   <label>Enter Recipe Instructions:</label>
   <input [(ngModel)]="childSelectedRecipe.instructions">
   <button (click)="finishedEditing()" class="btn btn-primary btn-sm">Done</button>

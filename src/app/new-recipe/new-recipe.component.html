@@ -1,0 +1,16 @@
+<h3>New Recipe</h3>
+<div>
+ <label>Enter Recipe Description:</label>
+ <input #newDescription>
+</div>
+<div>
+  <label>Enter Recipe Ingredients:</label>
+  <input #newIngredients>
+</div>
+<div>
+ <label>Enter Recipe Instructions:</label>
+ <input #newInstructions>
+</div>
+<div>
+  <button (click)="submitForm(newDescription.value, newIngredients.value, newInstructions.value); newDescription.value='';newIngredients.value=''; newInstructions.value='';">Add recipe</button>
+</div>
