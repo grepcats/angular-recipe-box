@@ -10,10 +10,16 @@ export class AppComponent {
   title = 'Recipe Box';
 
   masterRecipeList: Recipe[] = Recipe.allRecipes;
+  selectedRecipe: Recipe = this.masterRecipeList[0];
+  editRecipe(clickedRecipe) {
+  this.selectedRecipe = clickedRecipe;
+  }
 
-
+//   editTask() {
+//     alert("You just requested to edit a Task!");
+//
+// }
 }
-
 
 
 new Recipe('Oatmeal', ['oats', 'water', 'salt'], 'Boil the oats in water and salt');

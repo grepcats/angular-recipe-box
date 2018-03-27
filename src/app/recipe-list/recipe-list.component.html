@@ -1,5 +1,7 @@
 <div>
   <ul>
-    <li *ngFor="let currentRecipe of childRecipeList">{{currentRecipe.description}}</li>
+    <li *ngFor="let currentRecipe of childRecipeList">{{currentRecipe.description}}
+    <button (click)="editButtonClicked(currentRecipe)" class="btn btn-warning btn-xs">EDIT</button>
+    </li>
   </ul>
 </div>
