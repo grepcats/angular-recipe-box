@@ -12,7 +12,7 @@ li {
   border-radius: 5px 5px 0 0;
   min-width: 250px;
   max-width: 250px;
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: #FCD1A4;
   color: #00B2CA;
 }
